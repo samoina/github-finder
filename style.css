@@ -1,0 +1,64 @@
+/* iMPORT fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Mulish&display=swap');
+
+
+/* CUSTOM SETTINGS */
+/* 
+1. Use a more accomodating box-sizing model and get rid of the default margin
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 2. Use % for the height. Remember width is claculated based on ]the parent element but the height of an element is based on the children. vh does not work well especially on mobile devices*/
+html, body {
+  height: 100%;
+  font-family: 'Mulish', sans-serif;
+  background-color: #f1ebeb;
+}
+
+/*3. Make sure the line-height is accessible, 1.5 is preferred accorsing to the WCAG but override it for headings */
+body {
+  line-height: 1.5;
+}
+
+/* 4. Tweak defaults for media because, images are considered inline elements and thought they need to appear in the middle of paragraphs, which isn't common practice, creates weird spaces, thanks to additional line height when the image is considered an inline element. Set a max-width of 100% to prevent huge images from overflowing */
+img, picture, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. eliminate default typography styles in the form. this allows forms to inherit styles from parent elements and not the weird defaults*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Get rid of text overlflow esp for long words*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* BODY STYLING */
+#title {
+  background: rgb(72, 72, 235);
+  padding: 20px;  
+  color: white;
+}
+
+#title h1 {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.user-interface {
+  width: 700px;
+  border: solid 2px lightgrey;
+  margin: 0 auto;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+header input {
+  width: 100%;
+}
